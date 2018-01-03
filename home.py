@@ -16,10 +16,6 @@ def get_option():
     '''
     print("1. Login.\n2. Create New Account.")
     option_number = int(input("Enter Your option :"))
-    
-    if(option_number not in {1,2}):
-        print("Invalid choice.\n")
-        return get_option()
 
     return option_number
     
@@ -34,7 +30,10 @@ def initialise():
     
     if option_type == 1 :
         login()
-    else :
+    elif option_type == 2 :
         create_new_account()
+    else:
+        print('Invalid Choice')
+
         
     
